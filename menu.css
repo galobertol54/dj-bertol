@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0b0b0b;
+    color: #fff;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+                url('https://premieredm.files.wordpress.com/2023/05/klangkuenstler-movement-detroit.jpg?w=1024.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+/* ================= MENU ================= */
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.95rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #d4af37;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO TEXT ================= */
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    letter-spacing: 4px;
+}
+
+.hero-text p {
+    margin: 15px 0 30px;
+    font-size: 1.2rem;
+}
+
+/* ================= BOTON DORADO ================= */
+
+.btn {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #d4af37, #f5e27a);
+    color: #000;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ================= SECCIONES UNIFICADAS ================= */
+
+.section {
+    padding: 100px 60px;
+    text-align: center;
+    background: #0b0b0b;
+}
+
+.section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+}
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 40px;
+    width: 300px;
+    border-radius: 15px;
+    background: #111;
+    transition: 0.4s;
+    border: 1px solid rgba(212,175,55,0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border: 1px solid #d4af37;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #d4af37;
+}
+
+/* ================= REPERTORIO MUSICAL ================= */
+
+.repertorio-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.genero {
+    padding: 18px 35px;
+    border-radius: 40px;
+    background: #111;
+    border: 1px solid rgba(212,175,55,0.25);
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.genero:hover {
+    background: linear-gradient(135deg, #d4af37, #f5e27a);
+    color: #000;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(212,175,55,0.4);
+}
+
+/* ================= CONTACTO CON FONDO HERO ================= */
+
+#contacto {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+                url('https://www.irelandbeforeyoudie.com/wp-content/uploads/2022/10/pygmalion-1.jpg') center/cover no-repeat;
+}
+
+.info-contacto p {
+    margin: 12px 0;
+    font-size: 1.1rem;
+}
+
+.redes {
+    margin-top: 40px;
+}
+
+.redes h3 {
+    margin-bottom: 15px;
+}
+
+.redes a {
+    color: #d4af37;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    opacity: 0.7;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    padding: 25px;
+    text-align: center;
+    background: #000;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .menu {
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .repertorio-grid {
+        gap: 15px;
+    }
+
+    .genero {
+        width: 100%;
+        max-width: 300px;
+    }
+}
